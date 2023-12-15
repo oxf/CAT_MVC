@@ -50,7 +50,8 @@ namespace WebApplication1.Controllers
         // GET: HomeController1/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            User user = _userDbContext.Users.Find(id);
+            return View(user);
         }
 
         // POST: HomeController1/Edit/5
